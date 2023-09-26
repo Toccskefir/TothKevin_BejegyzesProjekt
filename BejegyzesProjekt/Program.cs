@@ -83,16 +83,32 @@ namespace BejegyzesProjekt
 
             //b
             Console.WriteLine("35-nél több likeal rendelkező posztok:");
-            bool exists = true;
+            bool exists35 = true;
             foreach (Bejegyzes item in list)
             {
                 if (item.Likeok > 35)
                 {
                     Console.WriteLine(item);
-                    exists = false;
+                    exists35 = false;
                 }
             }
-            if (exists)
+            if (exists35)
+            {
+                Console.WriteLine("Jelenleg nincs ilyen poszt.");
+            }
+
+            //c
+            Console.WriteLine("15-nél kevesebb likeal rendelkező posztok:");
+            bool exists15 = true;
+            foreach (Bejegyzes item in list)
+            {
+                if (item.Likeok < 15)
+                {
+                    Console.WriteLine(item);
+                    exists15 = false;
+                }
+            }
+            if (exists15)
             {
                 Console.WriteLine("Jelenleg nincs ilyen poszt.");
             }
