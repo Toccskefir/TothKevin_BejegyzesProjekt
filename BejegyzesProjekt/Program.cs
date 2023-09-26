@@ -52,6 +52,14 @@ namespace BejegyzesProjekt
                 }
             }
 
+            //d
+            Random rnd = new Random();
+            for (int i = 0; i < list.Count * 20; i++)
+            {
+                list[rnd.Next(0, list.Count)].Like();
+            }
+
+            
             Console.ReadKey();
         }
     }
