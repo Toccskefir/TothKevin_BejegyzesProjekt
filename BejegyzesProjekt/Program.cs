@@ -68,6 +68,20 @@ namespace BejegyzesProjekt
             {
                 Console.WriteLine(item + "\n");
             }
+
+            //3. Feladat
+            //a
+            Bejegyzes mostFamousPost = list[0];
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (mostFamousPost.Likeok < list[i].Likeok)
+                {
+                    mostFamousPost = list[i];
+                }
+            }
+            Console.WriteLine("Jelenlegi legnépszerűbb poszt like száma :" + mostFamousPost.Likeok);
+
+
             Console.ReadKey();
         }
     }
