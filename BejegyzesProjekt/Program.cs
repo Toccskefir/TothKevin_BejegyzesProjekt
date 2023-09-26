@@ -79,7 +79,7 @@ namespace BejegyzesProjekt
                     mostFamousPost = list[i];
                 }
             }
-            Console.WriteLine("Jelenlegi legnépszerűbb poszt like száma :" + mostFamousPost.Likeok);
+            Console.WriteLine("Jelenlegi legnépszerűbb poszt like száma :" + mostFamousPost.Likeok + "\n");
 
             //b
             Console.WriteLine("35-nél több likeal rendelkező posztok:");
@@ -94,7 +94,7 @@ namespace BejegyzesProjekt
             }
             if (exists35)
             {
-                Console.WriteLine("Jelenleg nincs ilyen poszt.");
+                Console.WriteLine("Jelenleg nincs ilyen poszt.\n");
             }
 
             //c
@@ -110,7 +110,27 @@ namespace BejegyzesProjekt
             }
             if (exists15)
             {
-                Console.WriteLine("Jelenleg nincs ilyen poszt.");
+                Console.WriteLine("Jelenleg nincs ilyen poszt.\n");
+            }
+
+            //d
+            for (int i = 0; i < list.Count; i++)
+            {
+                for (int j = 0; j < list.Count; j++)
+                {
+                    if (list[i].Likeok > list[j].Likeok)
+                    {
+                        Bejegyzes temp = list[i];
+                        list[i] = list[j];
+                        list[j] = temp;
+                    }
+                }
+            }
+
+            Console.WriteLine("Likeok szerint rendezve:");
+            foreach (Bejegyzes item in list)
+            {
+                Console.WriteLine(item + "\n");
             }
             Console.ReadKey();
         }
