@@ -59,6 +59,10 @@ namespace BejegyzesProjekt
                 list[rnd.Next(0, list.Count)].Like();
             }
 
+            //e
+            Console.WriteLine("Kérem adja meg mire módosítja második posztját: ");
+            list[1].Tartalom = Console.ReadLine();
+
             
             Console.ReadKey();
         }
