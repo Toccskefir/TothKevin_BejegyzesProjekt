@@ -20,7 +20,7 @@ namespace BejegyzesProjekt
             this.szerzo = szerzo;
             this.tartalom = tartalom;
             this.likeok = 0;
-            this.letrejott = DateTime.Now;
+            this.letrejott = DateTime.Today;
             this.szerkesztve = DateTime.Now;
             this.szerkesztvevan = false;
         }
