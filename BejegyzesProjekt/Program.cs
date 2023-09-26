@@ -88,7 +88,7 @@ namespace BejegyzesProjekt
             {
                 if (item.Likeok > 35)
                 {
-                    Console.WriteLine(item);
+                    Console.WriteLine(item + "\n");
                     exists35 = false;
                 }
             }
@@ -104,7 +104,7 @@ namespace BejegyzesProjekt
             {
                 if (item.Likeok < 15)
                 {
-                    Console.WriteLine(item);
+                    Console.WriteLine(item + "\n");
                     exists15 = false;
                 }
             }
@@ -131,6 +131,15 @@ namespace BejegyzesProjekt
             foreach (Bejegyzes item in list)
             {
                 Console.WriteLine(item + "\n");
+            }
+
+            //fájlba írás
+            using(StreamWriter sw = new StreamWriter("bejegyzesek_rendezett.txt", false))
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    sw.WriteLine(list[i] + "\n");
+                }
             }
             Console.ReadKey();
         }
