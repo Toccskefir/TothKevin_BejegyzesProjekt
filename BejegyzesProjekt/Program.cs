@@ -63,7 +63,11 @@ namespace BejegyzesProjekt
             Console.WriteLine("Kérem adja meg mire módosítja második posztját: ");
             list[1].Tartalom = Console.ReadLine();
 
-            
+            //f
+            foreach (Bejegyzes item in list)
+            {
+                Console.WriteLine(item + "\n");
+            }
             Console.ReadKey();
         }
     }
