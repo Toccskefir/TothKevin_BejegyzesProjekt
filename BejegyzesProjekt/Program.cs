@@ -81,7 +81,21 @@ namespace BejegyzesProjekt
             }
             Console.WriteLine("Jelenlegi legnépszerűbb poszt like száma :" + mostFamousPost.Likeok);
 
-
+            //b
+            Console.WriteLine("35-nél több likeal rendelkező posztok:");
+            bool exists = true;
+            foreach (Bejegyzes item in list)
+            {
+                if (item.Likeok > 35)
+                {
+                    Console.WriteLine(item);
+                    exists = false;
+                }
+            }
+            if (exists)
+            {
+                Console.WriteLine("Jelenleg nincs ilyen poszt.");
+            }
             Console.ReadKey();
         }
     }
